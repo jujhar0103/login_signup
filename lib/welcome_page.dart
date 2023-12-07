@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:login_signup/login_page.dart';
+import 'package:login_signup/signup_page.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -65,7 +66,13 @@ class WelcomePage extends StatelessWidget {
             ),
             const SizedBox(height: 23),
             OutlinedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (ctx) => const SignupPage(),
+                  ),
+                );
+              },
               style: OutlinedButton.styleFrom(
                 backgroundColor: const Color.fromARGB(255, 255, 141, 199),
                 padding: const EdgeInsets.symmetric(
